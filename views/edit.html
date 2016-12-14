@@ -1,12 +1,16 @@
+<% include header.html %>
+
 <h1>Edit a word</h1>
 
-<form action="/words/<%= id %>/update?_method=put" method="post">
-  
+<form action="/words/<%= word._id %>/update?_method=put" method="post">
+
   <label>French</label>
   <input type="text" name="french" value="<%= word.french %>">
-  
+
   <label>Italian</label>
   <input type="text" name="italian" value="<%= word.italian %>">
-  
+
   <input type="submit" value="Update">
 </form>
+
+<% include footer.html %>

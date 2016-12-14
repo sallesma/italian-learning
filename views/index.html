@@ -1,19 +1,22 @@
 <% include header.html %>
 
 <h1>Words</h1>
+
+<a href="/words/new">New word</a>
+
 <table id="words">
   <tr>
     <th>French</th>
     <th>Italian</th>
     <th>Actions</th>
   </tr>
-  
-  <% words.forEach(function(word, id){ %>
+
+  <% words.forEach(function(word){ %>
     <tr>
       <td><%= word.french %></td>
       <td><%= word.italian %></td>
       <td>
-        <a href="/words/<%= id %>/edit">Edit</a>
+        <a href="/words/<%= word._id %>/edit">Edit</a>
       </td>
     </tr>
   <% }) %>
